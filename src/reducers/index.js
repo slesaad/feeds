@@ -2,18 +2,14 @@ import { combineReducers } from 'redux';
 import uiStateReducer from './uiState';
 import weatherStateReducer from './weatherState';
 import newsStateReducer from './newsState';
+import googleAuthStateReducer from './googleAuthState';
 
-
-export const initialState = {
-    currentPage: 'dashboard',
-    weather: undefined,
-    news: undefined,
-};
 
 const reducers = combineReducers({
     uiState: uiStateReducer,
     weatherState: weatherStateReducer,
     newsState: newsStateReducer,
+    googleAuthState: googleAuthStateReducer,
 });
 
 export default reducers;

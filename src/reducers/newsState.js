@@ -1,5 +1,3 @@
-import { initialState } from './index.js';
-
 export const SET_NEWS = 'newsState/SET_NEWS';
 
 export const setNewsAction = news => ({
@@ -7,9 +5,9 @@ export const setNewsAction = news => ({
     news,
 });
 
-// const initialState = {
-//     news: null,
-// };
+const initialState = {
+    news: undefined,
+};
 
 export const reducer = (state = initialState, action) => {
     if (action.type === SET_NEWS) {

@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { GoogleLogin, GoogleLogout } from 'react-google-oauth';
+
 import { setCurrentPageAction } from '../../reducers/uiState';
 import styles from './style.scss';
 
+
+const mapStateToProps = state => ({
+    loggedIn: state.googleAuthState.loggedIn,
+});
 
 const mapDispatchToProps = dispatch => ({
     setCurrentPage: currentPage => dispatch(setCurrentPageAction(currentPage)),
@@ -17,6 +23,7 @@ class Settings extends Component {
         return (
             <div className={styles.settings}>
                 <div className={styles.container}>
+                    {/* Comment
                     <div className={styles.loginFacebook}>
                         <button type="button">
                             <span className="icon ion-social-facebook" />
@@ -28,6 +35,11 @@ class Settings extends Component {
                             <span className="icon ion-social-twitter" />
                                 Login to Twitter
                         </button>
+                    </div>
+                        */}
+                    <div>
+                        {this.props.loggedIn === false && <GoogleLogin />}
+                        {this.props.loggedIn === true && <GoogleLogout />}
                     </div>
                     <div className={styles.cross}>
                         <button type="button" onClick={this.handleCrossClick}>
@@ -49,4 +61,4 @@ class Settings extends Component {
     }
 }
 
-export default connect(undefined, mapDispatchToProps)(Settings);
+export default connect(mapStateToProps, mapDispatchToProps)(Settings);

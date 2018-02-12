@@ -1,5 +1,3 @@
-import { initialState } from './index.js';
-
 export const SET_CURRENT_PAGE = 'uiState/SET_CURRENT_PAGE';
 
 export const setCurrentPageAction = currentPage => ({
@@ -7,9 +5,9 @@ export const setCurrentPageAction = currentPage => ({
     currentPage,
 });
 
-// const initialState = {
-//     currentPage: 'dashboard',
-// };
+const initialState = {
+    currentPage: 'dashboard',
+};
 
 export const reducer = (state = initialState, action) => {
     if (action.type === SET_CURRENT_PAGE) {

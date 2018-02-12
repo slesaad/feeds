@@ -1,5 +1,3 @@
-import { initialState } from './index.js';
-
 export const SET_WEATHER = 'weatherState/SET_WEATHER';
 
 export const setWeatherAction = weather => ({
@@ -7,9 +5,9 @@ export const setWeatherAction = weather => ({
     weather,
 });
 
-// const initialState = {
-//     weather: null,
-// };
+const initialState = {
+    weather: undefined,
+};
 
 export const reducer = (state = initialState, action) => {
     if (action.type === SET_WEATHER) {
