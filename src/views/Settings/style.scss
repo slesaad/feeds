@@ -1,0 +1,73 @@
+.settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    position: relative;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: calc(100vh - 128px);
+
+        .cross {
+            position: absolute;
+            top: 32px;
+            right: 32px;
+
+            button {
+                width: auto;
+                outline: transparent;
+                border: 0px;
+                cursor: pointer;
+                background-color: transparent;
+            }
+        }
+
+        button {
+            width: 200px;
+            height: 32px;
+            margin: 16px;
+        }
+
+        :global .icon {
+            font-size: 16px;
+            color: gray;
+            margin: 0 8px;
+        }
+
+        :global .ion-social-facebook {
+            color: #3b5998;
+            margin: 0 8px;
+        }
+
+        :global .ion-social-twitter {
+            color: #0084b4;
+        }
+
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #333;
+        width: 100%;
+
+        p {
+            color: white;
+            margin: 4px;
+            padding: 0px;
+            font-size: 12px;
+
+            a {
+                margin: 0 8px;
+                font-size: 16px;
+                color: white;
+            }
+        }
+    }
+}

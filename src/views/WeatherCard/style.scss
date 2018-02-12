@@ -1,0 +1,35 @@
+.weatherCard {
+    margin: 16px;
+    flex-basis: 640px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+
+    .weather {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 16px;
+
+        .location {
+            
+            .city {
+                font-size: 24px;
+            }
+
+            .weatherIcon {
+                margin-top: 16px;
+            }
+
+            .temp {
+                font-size: 60px;
+            }
+        }
+
+        .weatherInfo {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            color: gray;
+        }
+    } 
+}
