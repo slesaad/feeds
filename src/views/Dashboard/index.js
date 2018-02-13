@@ -13,10 +13,11 @@ export default class Dashboard extends Component {
             <div className={styles.dashboard}>
                 <Header />
                 <div className={styles.cards}>
-                    <WeatherCard />
+                    <div className={styles.firstColumn}>
+                        <WeatherCard />
+                        <TwitterCard />
+                    </div>
                     <NewsCard />
-                    <FacebookCard />
-                    <TwitterCard />
                 </div>
             </div>
         );

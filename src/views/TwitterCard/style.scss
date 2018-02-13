@@ -1,7 +1,21 @@
 .twitterCard {
     margin: 16px;
     flex-basis: 640px;
-    height: 200px;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    padding: 16px 16px;
+
+    .title {
+        font-size: 32px;
+    }
+
+    div {
+        .summary {
+            font-size: 16px;
+            margin: 8px 0 0 0;
+        }
+        .date {
+            font-size: 12px;
+        }
+    }
 }

@@ -4,6 +4,10 @@ import { connect } from 'react-redux';
 import { setCurrentPageAction } from '../../reducers/uiState';
 import styles from './style.scss';
 
+const mapStateToProps = state => ({
+    name: state.googleAuthState.name,
+});
+
 const mapDispatchToProps = dispatch => ({
     setCurrentPage: currentPage => dispatch(setCurrentPageAction(currentPage)),
 });
@@ -17,16 +21,16 @@ class Header extends Component {
     render() {
         return (
             <div className={styles.header}>
-                <h1> Hi, beautiful ! </h1>
+                <h1> Hi, Stranger!</h1>
                 <p>
-                    FEEDS
+                    feeds
                 </p>
                 <button onClick={this.handleSettingsClick}>
-                    <span className="icon ion-settings" />
+                    <span className="icon ion-android-settings" />
                 </button>
             </div>
         );
     }
 }
 
-export default connect(undefined, mapDispatchToProps)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

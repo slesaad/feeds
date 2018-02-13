@@ -68,7 +68,7 @@ export class WeatherCard extends Component {
     render() {
         if (!this.props.weather) {
             return (
-                <div> Loading ... </div>
+                <div className={styles.weatherCard}> Loading ... </div>
             );
         }
 

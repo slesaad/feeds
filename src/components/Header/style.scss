@@ -1,11 +1,11 @@
 .header {
-    background-image: url('../../img/header-bg.jpg');
+    //background-image: url('../../img/header-bg.jpg');
+    background-color: #607D8B;
     background-position: bottom;
     background-size: cover;
     display: flex;
     height: 96px;
     padding: 8px 0;
-    justify-content: space-between;
     align-items: flex-end;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
     
@@ -17,21 +17,25 @@
         }
 
         .icon:hover {
-            color: lightgray;
+            color: #CFD8DC;
         }
     }
 
     h1 {
         margin-left: 16px;
+        margin-right: auto;
         color: white;
         font-size: 24px;
         font-weight: 300;
     }
 
     p {
+        font-family: 'Sacramento', cursive;
         font-size: 48px;
+        font-weight: bold;
         margin: 0 144px 0 0;
         color: white;
+        align-self: center;
     }
 
     button {
@@ -40,5 +44,6 @@
         background-color: transparent;
         padding: 0;
         cursor: pointer;
+        margin-left: auto;
     }
 }

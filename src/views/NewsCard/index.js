@@ -56,7 +56,7 @@ export class NewsCard extends Component {
     render() {
         if (!this.props.news) {
             return (
-                <div> Loading .. </div>
+                <div className={styles.newsCard}> Loading .. </div>
             );
         }
         return (

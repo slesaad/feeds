@@ -1,6 +1,6 @@
 .cards{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
+    justify-content: center;
     align-items: flex-start;
-    align-content: flex-start;
 }

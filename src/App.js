@@ -18,9 +18,18 @@ const mapDispatchToProps = dispatch => ({
 });
 
 class App extends Component {
+    returnName = () => {
+        const name = window.gapi.auth2.getAuthInstance().currentUser.get().getBasicProfile();
+        console.log(name);
+        if (!name) {
+            return 'Stranger';
+        }
+        return name.ofa;
+    }
+
     handleLogin = (signIn) => {
         console.log(signIn);
-        this.props.setGoogleAuth(signIn);
+        this.props.setGoogleAuth(signIn, this.returnName());
     }
 
     handleFailure = (error) => {
@@ -33,6 +42,8 @@ class App extends Component {
                 clientId="278605753232-ekp73eni3h1evth0idun4ia7h2djjljj.apps.googleusercontent.com"
                 onUpdateSigninStatus={this.handleLogin}
                 onInitFailure={this.handleFailure}
+                scope="https://www.googleapis.com/auth/calendar.readonly"
+                fetchBasicProfile
             >
                 <div className={styles.app}>
                     {this.props.currentPage === 'dashboard' && <Dashboard />}
